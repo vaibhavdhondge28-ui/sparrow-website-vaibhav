@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown, Share2, Search, Smartphone, Bot, ShoppingBag, Shi
 import SparrowLogo from './SparrowLogo';
 import LetsTalkButton from './LetsTalkButton';
 
-export default function Navbar({ onOpenContact, onSelectProduct }) {
+export default function Navbar({ onOpenContact, onSelectProduct, onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
@@ -76,7 +76,7 @@ export default function Navbar({ onOpenContact, onSelectProduct }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Enterprise Sparrow Logo */}
-        <a href="#" className="cursor-pointer">
+        <a href="#" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('/'); }} className="cursor-pointer">
           <SparrowLogo variant="dark" />
         </a>
 

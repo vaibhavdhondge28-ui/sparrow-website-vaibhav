@@ -1,27 +1,31 @@
 import React, { useState } from 'react';
-import { Mail, Phone, X } from 'lucide-react';
+import { Mail, Phone, MapPin, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SparrowLogo from './SparrowLogo';
 import LetsTalkButton from './LetsTalkButton';
 
-export default function Footer({ onOpenContact }) {
+export default function Footer({ onOpenContact, onNavigate }) {
   const [activePolicy, setActivePolicy] = useState(null);
 
   return (
-    <footer className="bg-haptiq-footer text-blue-200 pt-16 pb-10 border-t border-blue-900/60 relative">
+    <footer className="bg-[#06152B] text-blue-200 pt-16 pb-10 border-t border-blue-900/60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-blue-900/50">
           {/* Brand Info */}
-          <div className="lg:col-span-4 space-y-5">
-            <a href="#" className="cursor-pointer">
+          <div className="lg:col-span-4 space-y-5 text-left">
+            <a href="#" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('/'); }} className="cursor-pointer">
               <SparrowLogo variant="dark" />
             </a>
 
             <p className="text-blue-200 text-sm leading-relaxed max-w-sm">
-              Sparrow IT and digital solutions delivers high-ROAS Meta Ads (Facebook/Instagram), Google Ads campaigns, and custom web &amp; mobile app development for growing businesses.
+              Sparrow IT &amp; Digital Solutions provides custom software, web applications, mobile apps, and digital growth services for businesses in Malegaon, Nashik, Maharashtra and beyond.
             </p>
 
             <div className="space-y-2 pt-2 text-xs font-mono text-white">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-sky-400 shrink-0" />
+                <span>Malegaon &amp; Nashik, Maharashtra, India</span>
+              </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
                 <span>Call / WhatsApp: <a href="tel:8421477238" className="hover:underline text-sky-300">8421477238</a> / <a href="tel:9022454300" className="hover:underline text-sky-300">9022454300</a></span>
@@ -34,19 +38,9 @@ export default function Footer({ onOpenContact }) {
           </div>
 
           {/* Offerings */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 space-y-4 text-left">
             <h4 className="text-xs font-mono uppercase tracking-widest text-white font-bold">Offerings</h4>
             <ul className="space-y-2.5 text-xs text-blue-100">
-              <li>
-                <button onClick={() => onOpenContact('Meta Ads (Facebook & Instagram Ads)')} className="hover:text-white transition-colors text-left cursor-pointer">
-                  Meta Ads (Facebook &amp; Instagram Ads)
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onOpenContact('Google Ads & PPC Marketing')} className="hover:text-white transition-colors text-left cursor-pointer">
-                  Google Ads &amp; PPC Campaigns
-                </button>
-              </li>
               <li>
                 <button onClick={() => onOpenContact('Custom Web Application Development')} className="hover:text-white transition-colors text-left cursor-pointer">
                   Custom Web Application Development
@@ -59,26 +53,55 @@ export default function Footer({ onOpenContact }) {
               </li>
               <li>
                 <button onClick={() => onOpenContact('Custom Software & Enterprise Apps')} className="hover:text-white transition-colors text-left cursor-pointer">
-                  Custom Software &amp; Enterprise Apps
+                  Custom Software &amp; ERP Systems
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onOpenContact('Meta Ads (Facebook & Instagram Ads)')} className="hover:text-white transition-colors text-left cursor-pointer">
+                  Meta Ads (Facebook &amp; Instagram Ads)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onOpenContact('Google Ads & PPC Marketing')} className="hover:text-white transition-colors text-left cursor-pointer">
+                  Google Ads &amp; PPC Campaigns
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Quick Links */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-white font-bold">Company</h4>
+          {/* Regional Hubs */}
+          <div className="lg:col-span-2 space-y-4 text-left">
+            <h4 className="text-xs font-mono uppercase tracking-widest text-white font-bold">Regional Hubs</h4>
             <ul className="space-y-2.5 text-xs text-blue-100">
-              <li><a href="#services" className="hover:text-white transition-colors cursor-pointer">Services</a></li>
-              <li><a href="#digital-marketing" className="hover:text-white transition-colors cursor-pointer">Digital Marketing</a></li>
-              <li><a href="#app-development" className="hover:text-white transition-colors cursor-pointer">App Development</a></li>
-              <li><a href="#solutions" className="hover:text-white transition-colors cursor-pointer">Platform Solutions</a></li>
-              <li><a href="#insights" className="hover:text-white transition-colors cursor-pointer">Insights</a></li>
+              {onNavigate && (
+                <>
+                  <li>
+                    <button onClick={() => onNavigate('/software-company-in-malegaon/')} className="hover:text-white transition-colors text-left cursor-pointer">
+                      Software Company Malegaon
+                    </button>
+                  </li>
+                  <li>
+                    <button onClick={() => onNavigate('/software-company-in-nashik/')} className="hover:text-white transition-colors text-left cursor-pointer">
+                      Software Company Nashik
+                    </button>
+                  </li>
+                  <li>
+                    <button onClick={() => onNavigate('/web-development-company-in-malegaon/')} className="hover:text-white transition-colors text-left cursor-pointer">
+                      Web Development
+                    </button>
+                  </li>
+                  <li>
+                    <button onClick={() => onNavigate('/mobile-app-development-in-malegaon/')} className="hover:text-white transition-colors text-left cursor-pointer">
+                      Mobile App Engineering
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
 
-          {/* Action Button */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Connect Action */}
+          <div className="lg:col-span-2 space-y-4 text-left">
             <h4 className="text-xs font-mono uppercase tracking-widest text-white font-bold">Connect</h4>
             <LetsTalkButton
               onClick={() => onOpenContact()}
@@ -91,7 +114,7 @@ export default function Footer({ onOpenContact }) {
         {/* Footer Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-300">
           <div>
-            &copy; 2026 Sparrow IT and digital solutions. All rights reserved.
+            &copy; 2026 Sparrow IT and digital solutions. Malegaon &amp; Nashik, Maharashtra. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6">
@@ -135,7 +158,7 @@ export default function Footer({ onOpenContact }) {
               </h3>
 
               <p className="text-xs text-slate-600 leading-relaxed">
-                Sparrow IT and digital solutions values your privacy. All information submitted through our contact forms is used solely to respond to project inquiries and manage Meta/Google Ads campaigns and custom software development services.
+                Sparrow IT &amp; Digital Solutions values your privacy. All information submitted through our contact forms is used solely to respond to project inquiries and manage Meta/Google Ads campaigns and custom software development services.
               </p>
 
               <div className="pt-4 border-t border-slate-100 flex justify-end">
