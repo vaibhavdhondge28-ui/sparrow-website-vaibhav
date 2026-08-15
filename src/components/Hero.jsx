@@ -21,8 +21,8 @@ export default function Hero({ onOpenContact }) {
   };
 
   return (
-    <section className="relative pt-32 pb-16 bg-gradient-to-b from-[#0B3392] via-[#0D40B3] to-[#0A2E85] text-white overflow-hidden">
-      {/* Background Radial Glow */}
+    <section className="relative pt-32 pb-20 bg-gradient-to-b from-[#0B3392] via-[#0D40B3] to-[#0A2E85] text-white overflow-hidden">
+      {/* Background Subtle Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px] bg-blue-500/20 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-7">
@@ -70,48 +70,37 @@ export default function Hero({ onOpenContact }) {
           />
         </motion.div>
 
-        {/* Hero Video Section */}
+        {/* Hero Video Container (EXACT AS HAPTIQ SCREENSHOT: NO OUTER BORDER, CLEAN ROUNDED CORNERS, CENTERED PLAY BUTTON) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.97, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="pt-8 max-w-4xl mx-auto"
         >
-          <div className="relative rounded-3xl border border-blue-400/30 bg-[#06152B] p-2 sm:p-3 shadow-2xl overflow-hidden group">
-            <div className="relative rounded-2xl overflow-hidden aspect-video bg-slate-950 flex items-center justify-center">
-              <video
-                ref={videoRef}
-                src={heroVideo}
-                autoPlay={false}
-                controls={isPlaying}
-                playsInline
-                onEnded={() => setIsPlaying(false)}
-                className="w-full h-full object-cover rounded-2xl cursor-pointer"
-                onClick={togglePlay}
-              >
-                Your browser does not support video playback.
-              </video>
+          <div className="relative rounded-3xl sm:rounded-[32px] overflow-hidden aspect-video bg-slate-950 shadow-2xl flex items-center justify-center group cursor-pointer" onClick={togglePlay}>
+            <video
+              ref={videoRef}
+              src={heroVideo}
+              autoPlay={false}
+              controls={isPlaying}
+              playsInline
+              onEnded={() => setIsPlaying(false)}
+              className="w-full h-full object-cover rounded-3xl sm:rounded-[32px]"
+            >
+              Your browser does not support video playback.
+            </video>
 
-              {!isPlaying && (
-                <div
-                  onClick={togglePlay}
-                  className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent flex flex-col items-center justify-center gap-4 cursor-pointer group/overlay transition-all"
-                >
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#1866EC] hover:bg-[#0D52D4] text-white flex items-center justify-center shadow-2xl shadow-blue-500/50 group-hover/overlay:scale-110 transition-all">
-                    <Play className="w-8 h-8 sm:w-10 sm:h-10 fill-current ml-1" />
+            {/* Haptiq Exact Centered Play Video Translucent Pill Button */}
+            {!isPlaying && (
+              <div className="absolute inset-0 bg-slate-950/25 flex items-center justify-center transition-all group-hover:bg-slate-950/35">
+                <div className="px-5 py-2.5 rounded-full bg-slate-900/70 hover:bg-slate-900/90 backdrop-blur-md border border-white/30 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-2xl transition-all group-hover:scale-105">
+                  <div className="w-5 h-5 rounded-full border border-white/60 flex items-center justify-center text-white">
+                    <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
                   </div>
-
-                  <div className="text-center space-y-1">
-                    <div className="text-sm sm:text-base font-bold text-white tracking-wide">
-                      Play Video
-                    </div>
-                    <div className="text-xs text-blue-200 font-mono">
-                      Sparrow IT &amp; Digital Solutions Overview
-                    </div>
-                  </div>
+                  <span>Play Video</span>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </motion.div>
       </div>

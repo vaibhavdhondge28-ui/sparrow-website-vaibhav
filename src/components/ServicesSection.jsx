@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, Share2, Search, Globe, Smartphone, Cpu, Palette, TrendingUp, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Share2, Search, Globe, Smartphone, Cpu, Palette, TrendingUp, Sparkles, CheckCircle2, Zap } from 'lucide-react';
 import LetsTalkButton from './LetsTalkButton';
 
 export default function ServicesSection({ onOpenContact }) {
@@ -8,106 +8,131 @@ export default function ServicesSection({ onOpenContact }) {
 
   const marketingServices = [
     {
+      id: 'meta-ads',
       title: 'Meta Ads (Facebook & Instagram)',
       icon: Share2,
-      tag: 'HIGH ROAS CAMPAIGNS',
-      desc: 'Precision audience targeting, retargeting funnels, and high-converting ad creatives designed to maximize return on ad spend.',
-      deliverables: ['Custom Ad Strategy & Copywriting', 'A/B Creative Testing', 'Pixel & CAPI Event Setup', 'Weekly ROAS Reporting'],
+      badge: 'HIGH ROAS CAMPAIGNS',
+      badgeBg: 'bg-blue-50 text-blue-700 border-blue-200',
+      iconBg: 'bg-blue-600 text-white',
+      desc: 'Precision audience targeting, retargeting funnels, and high-converting video/image ad creatives designed to maximize ROAS.',
+      deliverables: ['Custom Ad Strategy & Copywriting', 'A/B Creative Testing Engine', 'Pixel & CAPI Conversion Setup', 'Weekly ROAS & Lead Reporting'],
     },
     {
+      id: 'google-ads',
       title: 'Google Ads & PPC Marketing',
       icon: Search,
-      tag: 'HIGH INTENT LEADS',
-      desc: 'Search, Display, and Performance Max campaigns targeting ready-to-buy customers with conversion-optimized landing pages.',
-      deliverables: ['Keyword Research & Bidding', 'Search & PMax Campaigns', 'Negative Keyword Shielding', 'Conversion Tracking Setup'],
+      badge: 'HIGH INTENT LEADS',
+      badgeBg: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      iconBg: 'bg-emerald-600 text-white',
+      desc: 'Search, Display, and Performance Max campaigns targeting customers with conversion-optimized landing pages.',
+      deliverables: ['Keyword Bidding & Negative Match', 'Search & Performance Max Campaigns', 'Conversion API & Tag Manager', 'Cost-Per-Lead Optimization'],
     },
     {
+      id: 'seo-leadgen',
       title: 'SEO & Lead Generation',
       icon: TrendingUp,
-      tag: 'ORGANIC GROWTH',
-      desc: 'Long-term organic search ranking strategies combined with automated lead capture funnels to drive consistent inbound leads.',
-      deliverables: ['Technical SEO Audits', 'On-Page Content Optimization', 'Local Google Business Setup', 'Lead Magnet Funnels'],
+      badge: 'ORGANIC SEARCH GROWTH',
+      badgeBg: 'bg-sky-50 text-sky-700 border-sky-200',
+      iconBg: 'bg-sky-600 text-white',
+      desc: 'Organic search ranking strategies combined with automated lead capture funnels to drive consistent inbound business.',
+      deliverables: ['Technical On-Page SEO Audits', 'Organic Content Optimization', 'Local Google Profile Management', 'Automated Lead Capture Funnels'],
     },
     {
+      id: 'brand-design',
       title: 'Brand Creatives & Design',
       icon: Sparkles,
-      tag: 'VISUAL ASSETS',
-      desc: 'High-converting ad graphics, video motion assets, and brand collateral that captivate attention and build brand trust.',
-      deliverables: ['Ad Creative Bundles', 'Social Media Templates', 'Brand Identity Systems', 'Landing Page Banners'],
+      badge: 'HIGH IMPACT VISUALS',
+      badgeBg: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+      iconBg: 'bg-indigo-600 text-white',
+      desc: 'High-converting ad graphics, video motion assets, and brand collateral that captivate attention and build consumer trust.',
+      deliverables: ['Social Media & Ad Creative Bundles', 'Motion Graphic Ad Banners', 'Brand Identity Guidelines', 'Conversion Landing Page Designs'],
     },
   ];
 
   const appDevServices = [
     {
+      id: 'web-apps',
       title: 'Custom Web Applications',
       icon: Globe,
-      tag: 'REACT & NEXT.JS',
+      badge: 'REACT & NEXT.JS',
+      badgeBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+      iconBg: 'bg-cyan-600 text-white',
       desc: 'Fast, responsive, enterprise-grade web applications built with modern JavaScript frameworks for seamless user experience.',
-      deliverables: ['Custom React / Vite / Next.js', 'RESTful & GraphQL API Integration', 'Responsive Mobile-First UI', 'Cloud Deployment & Hosting'],
+      deliverables: ['React, Vite & Next.js Build', 'RESTful & GraphQL API Integration', 'Responsive Mobile-First Canvas', 'Sub-Second Page Load Speed'],
     },
     {
+      id: 'mobile-apps',
       title: 'Mobile App Development',
       icon: Smartphone,
-      tag: 'ANDROID & IOS NATIVE',
-      desc: 'Cross-platform and native mobile apps with intuitive interfaces, real-time push notifications, and secure offline storage.',
-      deliverables: ['React Native / Flutter Build', 'App Store & Play Store Publishing', 'User Auth & Payment Gateways', 'Performance Optimization'],
+      badge: 'ANDROID & IOS NATIVE',
+      badgeBg: 'bg-violet-50 text-violet-700 border-violet-200',
+      iconBg: 'bg-violet-600 text-white',
+      desc: 'Cross-platform and native mobile apps with intuitive interfaces, real-time push notifications, and offline data sync.',
+      deliverables: ['React Native / Flutter Build', 'Play Store & App Store Publishing', 'User Auth & Payment Gateways', 'Push Notification Triggers'],
     },
     {
+      id: 'custom-software',
       title: 'Custom Software & ERPs',
       icon: Cpu,
-      tag: 'ENTERPRISE TOOLS',
+      badge: 'ENTERPRISE WORKFLOWS',
+      badgeBg: 'bg-blue-50 text-blue-700 border-blue-200',
+      iconBg: 'bg-[#1866EC] text-white',
       desc: 'Tailored internal tools, inventory management software, and business workflow automation designed to streamline operations.',
-      deliverables: ['Admin Dashboard Controls', 'Role-Based Access (RBAC)', 'Database Schema Design', 'Third-Party Software Sync'],
+      deliverables: ['Admin Dashboard Controls', 'Role-Based Access (RBAC)', 'Database Schema Architecture', 'Third-Party Software Sync'],
     },
     {
+      id: 'ui-ux',
       title: 'UI/UX Interface Design',
       icon: Palette,
-      tag: 'HUMAN CENTRIC',
+      badge: 'HUMAN CENTRIC UX',
+      badgeBg: 'bg-pink-50 text-pink-700 border-pink-200',
+      iconBg: 'bg-pink-600 text-white',
       desc: 'Wireframing, interactive prototyping, and design systems crafted to delight users and maximize conversion rates.',
-      deliverables: ['Figma Design Prototypes', 'Design Tokens & Components', 'User Flow Mapping', 'Usability Testing'],
+      deliverables: ['Figma Design Prototypes', 'Design System & Component Kits', 'User Journey Mapping', 'Usability Testing & Iteration'],
     },
   ];
 
   const currentServices = activeTab === 'marketing' ? marketingServices : appDevServices;
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-[#06183D] via-[#092252] to-[#06152B] text-white relative overflow-hidden">
+    <section id="services" className="py-24 bg-gradient-to-b from-[#0A2750] via-[#F4F8FF] to-white text-slate-900 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900/60 border border-blue-400/30 text-sky-300 text-xs font-mono font-bold uppercase tracking-widest">
-            OUR CORE EXPERTISE
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-blue-200 text-blue-700 text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
+            <Zap className="w-3.5 h-3.5 text-blue-600" />
+            <span>OUR CORE EXPERTISE</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
             Digital marketing &amp; custom software <br />
-            <span className="text-[#38BDF8]">built under one roof.</span>
+            <span className="text-[#1866EC]">built under one roof.</span>
           </h2>
 
-          <p className="text-blue-100 text-base sm:text-lg leading-relaxed">
-            Select a service category to explore how Sparrow IT and digital solutions drives scalable business growth.
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+            Choose a service pillar to explore how Sparrow IT and digital solutions drives measurable revenue growth.
           </p>
         </div>
 
-        {/* Tab Switcher */}
+        {/* Modern Clean Floating Tab Switcher */}
         <div className="flex justify-center">
-          <div className="inline-flex p-1.5 rounded-2xl bg-blue-950/80 border border-blue-400/20 shadow-inner">
+          <div className="inline-flex p-1.5 rounded-2xl bg-white border border-blue-200 shadow-xl backdrop-blur-md">
             <button
               onClick={() => setActiveTab('marketing')}
-              className={`px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-6 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'marketing'
-                  ? 'bg-[#1866EC] text-white shadow-lg'
-                  : 'text-blue-200 hover:text-white'
+                  ? 'bg-[#1866EC] text-white shadow-lg shadow-blue-600/30'
+                  : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               1. Digital Marketing &amp; Ads
             </button>
             <button
               onClick={() => setActiveTab('appdev')}
-              className={`px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-6 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'appdev'
-                  ? 'bg-[#1866EC] text-white shadow-lg'
-                  : 'text-blue-200 hover:text-white'
+                  ? 'bg-[#1866EC] text-white shadow-lg shadow-blue-600/30'
+                  : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               2. Custom Web &amp; App Dev
@@ -115,7 +140,7 @@ export default function ServicesSection({ onOpenContact }) {
           </div>
         </div>
 
-        {/* Services Grid */}
+        {/* Modern Bento Service Cards Grid (High Contrast Clean UI) */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -123,51 +148,54 @@ export default function ServicesSection({ onOpenContact }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {currentServices.map((svc, index) => {
+            {currentServices.map((svc) => {
               const Icon = svc.icon;
               return (
                 <div
-                  key={index}
-                  className="rounded-3xl bg-[#0A234A]/80 border border-blue-500/20 p-8 shadow-xl hover:border-blue-400/50 transition-all flex flex-col justify-between group space-y-6"
+                  key={svc.id}
+                  className="rounded-3xl bg-white border border-blue-100 p-8 shadow-xl hover:shadow-2xl hover:border-blue-300 transition-all flex flex-col justify-between group space-y-6 text-left"
                 >
                   <div className="space-y-4">
+                    {/* Header Icon & Tag */}
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 rounded-2xl bg-blue-600/30 border border-blue-400/30 text-sky-300 flex items-center justify-center group-hover:bg-[#1866EC] group-hover:text-white transition-colors">
+                      <div className={`w-12 h-12 rounded-2xl ${svc.iconBg} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                         <Icon className="w-6 h-6" />
                       </div>
 
-                      <span className="px-3 py-1 rounded-full bg-blue-950/80 border border-blue-400/30 text-sky-200 text-[10px] font-mono font-bold uppercase tracking-wider">
-                        {svc.tag}
+                      <span className={`px-3.5 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider uppercase border ${svc.badgeBg}`}>
+                        {svc.badge}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white tracking-tight">
+                    <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight group-hover:text-[#1866EC] transition-colors">
                       {svc.title}
                     </h3>
 
-                    <p className="text-blue-100 text-sm leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       {svc.desc}
                     </p>
 
-                    <div className="space-y-2 pt-2 border-t border-blue-900/60">
+                    {/* Deliverables List */}
+                    <div className="space-y-2.5 pt-3 border-t border-slate-100">
                       {svc.deliverables.map((item, i) => (
-                        <div key={i} className="flex items-center gap-2.5 text-xs text-blue-200">
-                          <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                        <div key={i} className="flex items-center gap-2.5 text-xs text-slate-800 font-semibold">
+                          <CheckCircle2 className="w-4 h-4 text-[#1866EC] shrink-0" />
                           <span>{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
+                  {/* Clean Action Link */}
                   <div className="pt-2">
                     <button
                       onClick={() => onOpenContact(svc.title)}
-                      className="w-full py-3 rounded-xl bg-blue-900/60 hover:bg-[#1866EC] border border-blue-400/30 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      className="inline-flex items-center gap-2 text-xs font-bold text-[#1866EC] hover:text-blue-800 transition-colors cursor-pointer group/link"
                     >
                       <span>Inquire About {svc.title.split(' ')[0]}</span>
-                      <ArrowUpRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </div>
@@ -176,6 +204,7 @@ export default function ServicesSection({ onOpenContact }) {
           </motion.div>
         </AnimatePresence>
 
+        {/* Bottom CTA */}
         <div className="pt-4 flex justify-center">
           <LetsTalkButton onClick={() => onOpenContact()} label="Let's talk about your project" size="md" />
         </div>
