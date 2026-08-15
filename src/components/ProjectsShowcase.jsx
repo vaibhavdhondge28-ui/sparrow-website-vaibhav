@@ -77,7 +77,8 @@ export default function ProjectsShowcase({ onOpenContact }) {
                   {project.image ? (
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} - ${project.subtitle} by Sparrow IT & Digital Solutions`}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (

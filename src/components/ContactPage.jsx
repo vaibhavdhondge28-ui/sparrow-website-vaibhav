@@ -228,9 +228,9 @@ export default function ContactPage({ isOpen, onClose, initialService = '' }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
               {/* Left Column */}
               <div className="lg:col-span-5 space-y-3 sm:space-y-4 pt-2 text-left">
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
+                <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
                   We want to hear from you
-                </h1>
+                </h2>
 
                 <p className="text-slate-600 text-sm sm:text-lg leading-relaxed font-normal">
                   Please fill out the form below, and we will get back to you as soon as possible.

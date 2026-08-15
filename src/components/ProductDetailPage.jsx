@@ -143,9 +143,9 @@ export default function ProductDetailPage({ product, onClose, onOpenContact }) {
             <span>{info.badge}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
             {info.headline}
-          </h1>
+          </h2>
 
           <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto font-normal leading-relaxed">
             {info.subtitle}
@@ -248,7 +248,7 @@ export default function ProductDetailPage({ product, onClose, onOpenContact }) {
               <div className="lg:col-span-6">
                 {info.image ? (
                   <div className="rounded-2xl overflow-hidden border border-blue-400/30 shadow-xl">
-                    <img src={info.image} alt={info.title} className="w-full h-auto max-h-[300px] object-cover" />
+                    <img src={info.image} alt={`${info.title} - ${info.badge}`} loading="lazy" className="w-full h-auto max-h-[300px] object-cover" />
                   </div>
                 ) : (
                   <div className="rounded-2xl bg-slate-950 p-8 border border-blue-400/30 text-center space-y-4">
