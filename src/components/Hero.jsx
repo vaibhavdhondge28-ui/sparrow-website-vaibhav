@@ -70,29 +70,30 @@ export default function Hero({ onOpenContact }) {
           />
         </motion.div>
 
-        {/* Hero Video Container (Refined Sleek Radius) */}
+        {/* Hero Video Container (Preloads First Frame On Mobile - No Black Box) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.97, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="pt-8 max-w-4xl mx-auto"
         >
-          <div className="relative rounded-2xl overflow-hidden aspect-video bg-slate-950 shadow-2xl flex items-center justify-center group cursor-pointer" onClick={togglePlay}>
+          <div className="relative rounded-2xl overflow-hidden aspect-video bg-slate-900 shadow-2xl flex items-center justify-center group cursor-pointer" onClick={togglePlay}>
             <video
               ref={videoRef}
-              src={heroVideo}
+              src={`${heroVideo}#t=0.001`}
+              preload="auto"
+              playsInline
               autoPlay={false}
               controls={isPlaying}
-              playsInline
               onEnded={() => setIsPlaying(false)}
               className="w-full h-full object-cover rounded-2xl"
             >
               Your browser does not support video playback.
             </video>
 
-            {/* Haptiq Centered Play Video Pill Button */}
+            {/* Haptiq Centered Play Video Translucent Pill Button */}
             {!isPlaying && (
-              <div className="absolute inset-0 bg-slate-950/25 flex items-center justify-center transition-all group-hover:bg-slate-950/35">
+              <div className="absolute inset-0 bg-slate-950/20 flex items-center justify-center transition-all group-hover:bg-slate-950/30">
                 <div className="px-5 py-2.5 rounded-full bg-slate-900/70 hover:bg-slate-900/90 backdrop-blur-md border border-white/30 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-2xl transition-all group-hover:scale-105">
                   <div className="w-5 h-5 rounded-full border border-white/60 flex items-center justify-center text-white">
                     <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
