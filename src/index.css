@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #0A2540;
+    color: #0A2540;
+    scroll-behavior: smooth;
+    cursor: auto !important;
+  }
+
+  body {
+    cursor: auto !important;
+  }
+
+  a, button, [role="button"] {
+    cursor: pointer !important;
+  }
+
+  input, textarea, select {
+    cursor: text !important;
+  }
+
+  /* Custom smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A2540;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0066FF;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0052CC;
+  }
+}
+
+/* Haptiq Blue Visual Styles */
+.bg-haptiq-hero {
+  background: linear-gradient(180deg, #09203F 0%, #0052CC 45%, #0066FF 75%, #E6F0FF 100%);
+}
+
+.bg-haptiq-blue-banner {
+  background: linear-gradient(135deg, #0052CC 0%, #0066FF 50%, #0040A8 100%);
+}
+
+.bg-haptiq-footer {
+  background-color: #051329;
+}
+
+.text-haptiq-navy {
+  color: #0A2540;
+}
+
+.bg-haptiq-light-section {
+  background: linear-gradient(180deg, #E6F0FF 0%, #F4F8FF 50%, #FFFFFF 100%);
+}
+
+.bg-haptiq-light-alt {
+  background-color: #F4F8FF;
+}
+
+.btn-haptiq-primary {
+  background-color: #0066FF;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.35);
+}
+
+.btn-haptiq-primary:hover {
+  background-color: #0052CC;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.45);
+}
+
+/* Ticker Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
