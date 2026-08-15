@@ -114,14 +114,14 @@ export default function ServicesSection({ onOpenContact }) {
           </p>
         </div>
 
-        {/* Modern Clean Floating Tab Switcher */}
+        {/* Tab Switcher */}
         <div className="flex justify-center">
-          <div className="inline-flex p-1.5 rounded-2xl bg-white border border-blue-200 shadow-xl backdrop-blur-md">
+          <div className="inline-flex p-1.5 rounded-xl bg-white border border-blue-200 shadow-xl backdrop-blur-md">
             <button
               onClick={() => setActiveTab('marketing')}
-              className={`px-6 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-6 py-2.5 rounded-lg font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'marketing'
-                  ? 'bg-[#1866EC] text-white shadow-lg shadow-blue-600/30'
+                  ? 'bg-[#1866EC] text-white shadow-md shadow-blue-600/30'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -129,9 +129,9 @@ export default function ServicesSection({ onOpenContact }) {
             </button>
             <button
               onClick={() => setActiveTab('appdev')}
-              className={`px-6 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-6 py-2.5 rounded-lg font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'appdev'
-                  ? 'bg-[#1866EC] text-white shadow-lg shadow-blue-600/30'
+                  ? 'bg-[#1866EC] text-white shadow-md shadow-blue-600/30'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -140,7 +140,7 @@ export default function ServicesSection({ onOpenContact }) {
           </div>
         </div>
 
-        {/* Modern Bento Service Cards Grid (High Contrast Clean UI) */}
+        {/* Bento Service Cards (Refined rounded-2xl) */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -155,16 +155,16 @@ export default function ServicesSection({ onOpenContact }) {
               return (
                 <div
                   key={svc.id}
-                  className="rounded-3xl bg-white border border-blue-100 p-8 shadow-xl hover:shadow-2xl hover:border-blue-300 transition-all flex flex-col justify-between group space-y-6 text-left"
+                  className="rounded-2xl bg-white border border-blue-100 p-7 shadow-lg hover:shadow-xl hover:border-blue-300 transition-all flex flex-col justify-between group space-y-5 text-left"
                 >
                   <div className="space-y-4">
                     {/* Header Icon & Tag */}
                     <div className="flex items-center justify-between">
-                      <div className={`w-12 h-12 rounded-2xl ${svc.iconBg} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
-                        <Icon className="w-6 h-6" />
+                      <div className={`w-11 h-11 rounded-xl ${svc.iconBg} flex items-center justify-center shadow-md group-hover:scale-105 transition-transform`}>
+                        <Icon className="w-5.5 h-5.5" />
                       </div>
 
-                      <span className={`px-3.5 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider uppercase border ${svc.badgeBg}`}>
+                      <span className={`px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider uppercase border ${svc.badgeBg}`}>
                         {svc.badge}
                       </span>
                     </div>
@@ -178,7 +178,7 @@ export default function ServicesSection({ onOpenContact }) {
                     </p>
 
                     {/* Deliverables List */}
-                    <div className="space-y-2.5 pt-3 border-t border-slate-100">
+                    <div className="space-y-2 pt-3 border-t border-slate-100">
                       {svc.deliverables.map((item, i) => (
                         <div key={i} className="flex items-center gap-2.5 text-xs text-slate-800 font-semibold">
                           <CheckCircle2 className="w-4 h-4 text-[#1866EC] shrink-0" />
@@ -188,8 +188,8 @@ export default function ServicesSection({ onOpenContact }) {
                     </div>
                   </div>
 
-                  {/* Clean Action Link */}
-                  <div className="pt-2">
+                  {/* Action Link */}
+                  <div className="pt-1">
                     <button
                       onClick={() => onOpenContact(svc.title)}
                       className="inline-flex items-center gap-2 text-xs font-bold text-[#1866EC] hover:text-blue-800 transition-colors cursor-pointer group/link"
@@ -205,7 +205,7 @@ export default function ServicesSection({ onOpenContact }) {
         </AnimatePresence>
 
         {/* Bottom CTA */}
-        <div className="pt-4 flex justify-center">
+        <div className="pt-2 flex justify-center">
           <LetsTalkButton onClick={() => onOpenContact()} label="Let's talk about your project" size="md" />
         </div>
       </div>
