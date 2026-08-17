@@ -13,7 +13,7 @@ export default function ProjectsShowcase({ onOpenContact }) {
       desc: 'Full-stack AI learning platform generating custom courses, interactive quizzes, and instant AI tutor assistance.',
       image: '/skillverse-poster.jpg',
       tags: ['React', 'Node.js', 'Vite', 'Gemini AI API'],
-      demoUrl: 'https://skillverse-frontend-fawn.vercel.app/',
+      demoUrl: 'https://skillverse-ai-course-generator.vercel.app/',
       isConfidential: false,
     },
     {

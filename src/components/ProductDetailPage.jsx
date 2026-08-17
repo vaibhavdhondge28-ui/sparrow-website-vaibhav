@@ -24,7 +24,7 @@ export default function ProductDetailPage({ product, onClose, onOpenContact }) {
       headline: 'Unified AI learning solutions with real-time intelligence.',
       subtitle: 'One platform that generates personalized courses, interactive quizzes, and instant AI tutor assistance.',
       description: 'SkillVerse is a full-stack AI-driven educational software that transforms raw topics into structured learning modules, interactive assessments, and real-time student analytics.',
-      demoUrl: 'https://skillverse-frontend-fawn.vercel.app/',
+      demoUrl: 'https://skillverse-ai-course-generator.vercel.app/',
       image: '/skillverse-poster.jpg',
       stats: [
         { label: 'AI Generation Speed', val: '< 3 Seconds' },
