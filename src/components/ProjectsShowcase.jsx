@@ -11,7 +11,7 @@ export default function ProjectsShowcase({ onOpenContact }) {
       subtitle: 'AI-POWERED COURSE GENERATOR',
       category: 'AI Platform',
       desc: 'Full-stack AI learning platform generating custom courses, interactive quizzes, and instant AI tutor assistance.',
-      image: '/skillverse-poster.jpg',
+      image: '/skillverse-poster.webp',
       tags: ['React', 'Node.js', 'Vite', 'Gemini AI API'],
       demoUrl: 'https://skillverse-ai-course-generator.vercel.app/',
       isConfidential: false,
@@ -22,7 +22,7 @@ export default function ProjectsShowcase({ onOpenContact }) {
       subtitle: 'LUXURY ETHNIC FASHION UI',
       category: 'E-Commerce Platform',
       desc: 'High-end e-commerce fashion web application featuring curated occasion collections and multi-store location finders.',
-      image: '/ib-poster.jpg',
+      image: '/ib-poster.webp',
       tags: ['React SPA', 'Tailwind CSS', 'Mobile First'],
       demoUrl: 'https://darshanahireworkspace.github.io/IB/',
       isConfidential: false,
@@ -42,7 +42,7 @@ export default function ProjectsShowcase({ onOpenContact }) {
 
   return (
     <section id="projects" className="py-20 sm:py-28 bg-gradient-to-b from-[#0A2E85] via-[#0B2347] to-[#0A2750] text-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+      <div className="site-container relative z-10 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900/80 border border-blue-400/30 text-sky-300 text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
@@ -77,7 +77,7 @@ export default function ProjectsShowcase({ onOpenContact }) {
                   {project.image ? (
                     <img
                       src={project.image}
-                      alt={`${project.title} - ${project.subtitle} by Sparrow IT & Digital Solutions`}
+                      alt={`${project.title} software platform application interface preview`}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />

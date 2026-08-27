@@ -74,7 +74,7 @@ export default function Navbar({ onOpenContact, onSelectProduct, onNavigate }) {
           : 'py-4.5 bg-[#0B3392]'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="site-container flex items-center justify-between">
         {/* Enterprise Sparrow Logo */}
         <a href="#" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('/'); }} className="cursor-pointer">
           <SparrowLogo variant="dark" />

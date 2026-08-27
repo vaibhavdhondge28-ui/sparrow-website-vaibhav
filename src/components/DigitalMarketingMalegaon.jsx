@@ -1,33 +1,30 @@
 import React, { useEffect } from 'react';
 import {
-  Cpu,
-  Globe,
-  Smartphone,
-  Building2,
-  Code2,
-  Sparkles,
+  Share2,
+  Search,
+  TrendingUp,
   MapPin,
-  ArrowRight,
-  CheckCircle2,
   HelpCircle,
-  ShieldCheck,
-  Zap,
-  Layers,
-  Database,
   BarChart3,
-  GitMerge,
+  Target,
+  Zap,
+  CheckCircle2,
   Navigation,
+  Globe,
+  MessageSquare,
+  FileText,
+  MousePointerClick,
 } from 'lucide-react';
 import LetsTalkButton from './LetsTalkButton';
 
-export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
+export default function DigitalMarketingMalegaon({ onOpenContact, onNavigate }) {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Software Development Company in Malegaon | Sparrow";
+    document.title = "Digital Marketing Company in Malegaon | Sparrow";
 
     let metaDesc = document.querySelector("meta[name='description']");
     if (metaDesc) {
-      metaDesc.content = "Custom business software, ERP systems, internal management portals, and process automation engineered for commercial enterprises in Malegaon and nearby regions.";
+      metaDesc.content = "Data-driven Meta Ads, Google Intent Search campaigns, technical SEO, and lead generation engines built to deliver measurable revenue growth for Malegaon businesses.";
     }
 
     let canonical = document.querySelector("link[rel='canonical']");
@@ -36,7 +33,7 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://sparrowitanddigitalsolutions.in/software-company-in-malegaon/";
+    canonical.href = "https://sparrowitanddigitalsolutions.in/digital-marketing-company-in-malegaon/";
 
     // FAQ Schema.org Structured Data Injection
     const schemaData = {
@@ -45,26 +42,34 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why should a business choose custom software over generic off-the-shelf tools?",
+          "name": "What digital marketing services does Sparrow provide in Malegaon?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Generic off-the-shelf software forces your business to adapt to rigid workflows and ongoing per-user subscription fees. Sparrow builds custom business software tailored to how your enterprise actually operates—eliminating manual bottlenecks and providing total data ownership."
+            "text": "Sparrow IT & Digital Solutions offers performance Meta Ads, Google Intent Search campaigns, technical & local SEO, high-converting landing page optimization, social media marketing, and automated lead generation engines."
           }
         },
         {
           "@type": "Question",
-          "name": "What software solutions does Sparrow engineer in Malegaon?",
+          "name": "How does Sparrow measure campaign performance and ROAS?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We build custom ERPs, internal administrative tools, inventory management portals, automated GST billing engines, multi-role executive dashboards, and multi-system API integrations for growing businesses."
+            "text": "We track measurable commercial metrics—including Cost Per Lead (CPL), Return On Ad Spend (ROAS), conversion rates, and qualified phone inquiries—using server-side Meta Conversions API (CAPI) and Google Tag Manager."
           }
         },
         {
           "@type": "Question",
-          "name": "Can Sparrow integrate custom software with our existing tools?",
+          "name": "How quickly can we see results from digital marketing campaigns?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. We design custom REST and GraphQL API connectors to integrate your software with payment gateways, WhatsApp messaging webhooks, accounting tools, and legacy databases."
+            "text": "Paid advertising campaigns on Meta and Google Search generate targeted lead inquiries within 24 to 48 hours of launch. Organic SEO and content strategies build sustainable search authority over 3 to 6 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you manage ad campaigns directly inside client ad accounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We maintain complete transparency by setting up and managing campaigns directly within your own Meta Business Manager and Google Ads accounts."
           }
         },
         {
@@ -72,23 +77,15 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
           "name": "Does Sparrow serve businesses outside of Malegaon?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. While our engineering team is headquartered in Malegaon, we work with commercial enterprises, manufacturers, and startups in nearby cities such as Nashik, Dhule, Manmad, Nandgaon, Yeola, and across Maharashtra."
+            "text": "Yes. Based in Malegaon, we regularly manage growth campaigns for commercial enterprises, retail brands, and service businesses in nearby cities such as Nashik, Dhule, Manmad, Nandgaon, Yeola, and across Maharashtra."
           }
         },
         {
           "@type": "Question",
-          "name": "Who owns the source code and software data?",
+          "name": "How can I start a digital marketing project with Sparrow?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You own 100% of the custom software code, database schema, and intellectual property. We deploy your software directly to your dedicated cloud servers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I start a software project with Sparrow?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can contact our team directly via phone (+91 8421477238 / +91 8806413189), email sparrowdigisolution@gmail.com, or click 'Start Your Software Project' to submit your project requirements."
+            "text": "You can call our growth team directly (+91 8421477238 / +91 8806413189), email sparrowdigisolution@gmail.com, or click 'Discuss Growth Strategy' to request a campaign roadmap."
           }
         }
       ]
@@ -96,120 +93,120 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.id = 'faq-schema-software-malegaon';
+    script.id = 'faq-schema-digital-marketing';
     script.text = JSON.stringify(schemaData);
     document.head.appendChild(script);
 
     return () => {
-      const existing = document.getElementById('faq-schema-software-malegaon');
+      const existing = document.getElementById('faq-schema-digital-marketing');
       if (existing) existing.remove();
     };
   }, []);
 
-  const softwareCapabilities = [
+  const marketingServices = [
     {
-      title: 'Custom Business Software',
-      desc: 'Bespoke enterprise operating platforms, inventory management tools, and supply chain engines tailored to your exact commercial operations.',
-      icon: Cpu,
+      title: 'Search Engine Optimization (SEO)',
+      desc: 'Technical on-page SEO, local schema markup, high-intent keyword architecture, and sub-second Core Web Vitals to rank organically on Google Search.',
+      icon: Search,
     },
     {
-      title: 'Internal Administrative Tools',
-      desc: 'Role-based access control (RBAC) portals, staff management consoles, approval workflows, and audit logging to streamline internal teams.',
-      icon: Building2,
+      title: 'Meta Ads (Facebook & Instagram)',
+      desc: 'Server-side Conversions API (CAPI) setup, precise audience clustering, dynamic video/motion ad creatives, and high-ROAS acquisition funnels.',
+      icon: Share2,
     },
     {
-      title: 'Business Automation Engines',
-      desc: 'Event-driven workflow pipelines, automated GST billing, invoice generation, and zero-human-error data synchronization.',
+      title: 'Google Intent Search Ads',
+      desc: 'High-intent search keyword bidding, Performance Max multi-channel campaigns, negative match filtering, and call-tracking setups.',
+      icon: Target,
+    },
+    {
+      title: 'Lead Generation Engines',
+      desc: 'Fast-loading custom landing pages, interactive lead capture forms, automated WhatsApp webhooks, and instant manager alert triggers.',
       icon: Zap,
     },
     {
-      title: 'Executive Dashboards & Analytics',
-      desc: 'Real-time business intelligence (BI) consoles, financial telemetry, live inventory monitors, and executive reporting modules.',
-      icon: BarChart3,
+      title: 'Content Strategy & Copywriting',
+      desc: 'Commercial copywriting, brand positioning frameworks, and persuasive ad copy designed to turn traffic into qualified inquiries.',
+      icon: FileText,
     },
     {
-      title: 'Multi-System API Integrations',
-      desc: 'REST & GraphQL API bridges connecting your software with WhatsApp webhooks, payment gateways, CRM databases, and legacy tools.',
-      icon: GitMerge,
-    },
-    {
-      title: 'Scalable Cloud Infrastructure',
-      desc: 'High-availability cloud hosting, encrypted PostgreSQL/Redis database schemas, and Docker containerized backend architecture.',
-      icon: Database,
+      title: 'Social Media Marketing & Creatives',
+      desc: 'Data-driven visual ad assets, high-engagement carousels, video ad design, and structured channel publishing management.',
+      icon: MousePointerClick,
     },
   ];
 
-  const workflowSteps = [
+  const growthSteps = [
     {
       num: '01',
-      title: 'Workflow Mapping',
-      desc: 'We analyze your real operational processes, data bottlenecks, and manual spreadsheets to design a streamlined system blueprint.',
+      title: 'Market & Audience Audit',
+      desc: 'We analyze customer search intent, competitor ad positioning, and target demographics to identify profitable acquisition channels.',
     },
     {
       num: '02',
-      title: 'System Architecture & Schema Design',
-      desc: 'Designing secure database relationships, user role permissions, API endpoints, and data validation rules.',
+      title: 'Server-Side Tracking Setup',
+      desc: 'Implementing Meta Conversions API (CAPI) and Google Tag Manager to ensure 99%+ attribution accuracy for every lead.',
     },
     {
       num: '03',
-      title: 'Agile Software Engineering',
-      desc: 'Building type-safe backend services and intuitive frontend admin dashboards using Python, Node.js, React, and TypeScript.',
+      title: 'Creative & Landing Page Build',
+      desc: 'Writing high-converting ad copy, designing visual ad creatives, and building fast sub-second landing pages for maximum conversion.',
     },
     {
       num: '04',
-      title: 'Security & Stress Audits',
-      desc: 'Comprehensive penetration checks, role-based permission validation, data encryption audits, and load testing.',
+      title: 'Campaign Scaling & Optimization',
+      desc: 'Monitoring daily click-through rates (CTR), filtering negative search terms, and reallocating ad budget to high-converting segments.',
     },
     {
       num: '05',
-      title: 'Deployment & Ongoing Support',
-      desc: 'Deploying your software to dedicated cloud infrastructure with automated backups, monitoring, and feature updates.',
+      title: 'Transparent Reporting & Telemetry',
+      desc: 'Delivering weekly audits tracking actual lead counts, Cost Per Lead (CPL), Return On Ad Spend (ROAS), and customer inquiries.',
     },
   ];
 
-  const whyCustomSoftware = [
+  const whyChooseUs = [
     {
-      title: 'Engineered Around Your Workflows',
-      desc: 'Off-the-shelf SaaS forces your company to adapt to rigid tools. Custom software is designed specifically for how your team operates.',
+      title: 'Focus on Commercial Metrics',
+      desc: 'We evaluate campaign performance based on Cost Per Lead (CPL) and revenue growth rather than vanity impressions or clicks.',
     },
     {
-      title: 'Zero Monthly Per-User Subscriptions',
-      desc: 'Own your software assets completely. Eliminate expensive recurring software licenses and arbitrary user limits as you scale.',
+      title: 'Server-Side Conversions API (CAPI)',
+      desc: 'Advanced server-side tracking bypasses browser ad-blockers to accurately measure true conversion events.',
     },
     {
-      title: 'Total Data Privacy & Security',
-      desc: 'Store proprietary business data inside your own encrypted database rather than third-party multi-tenant cloud servers.',
+      title: 'Integrated Web & Ad Engineering',
+      desc: 'As a software company, we build custom landing pages that load in under 800ms, significantly boosting ad conversion rates.',
     },
     {
-      title: 'End-to-End System Scalability',
-      desc: 'Add custom features, specialized integrations, and new operational modules whenever your business requires them.',
+      title: 'Complete Ad Account Ownership',
+      desc: 'All ad campaigns, pixels, and custom audiences are set up directly inside your company’s own business manager accounts.',
     },
   ];
 
   const faqs = [
     {
-      q: 'Why should a business choose custom software over generic off-the-shelf tools?',
-      a: 'Generic off-the-shelf software forces your company to adapt to rigid workflows and ongoing per-user subscription fees. Sparrow builds custom business software tailored to how your enterprise actually operates—eliminating manual bottlenecks and providing total data ownership.',
+      q: 'What digital marketing services does Sparrow provide in Malegaon?',
+      a: 'Sparrow IT & Digital Solutions offers performance Meta Ads, Google Intent Search campaigns, technical & local SEO, high-converting landing page optimization, social media marketing, and automated lead generation engines.',
     },
     {
-      q: 'What software solutions does Sparrow engineer in Malegaon?',
-      a: 'We build custom ERPs, internal administrative tools, inventory management portals, automated GST billing engines, multi-role executive dashboards, and multi-system API integrations for growing commercial enterprises.',
+      q: 'How does Sparrow measure campaign performance and ROAS?',
+      a: 'We track measurable commercial metrics—including Cost Per Lead (CPL), Return On Ad Spend (ROAS), conversion rates, and qualified phone inquiries—using server-side Meta Conversions API (CAPI) and Google Tag Manager.',
     },
     {
-      q: 'Can Sparrow integrate custom software with our existing tools?',
-      a: 'Yes. We design custom REST and GraphQL API connectors to integrate your software with payment gateways, WhatsApp messaging webhooks, accounting tools, and legacy databases.',
+      q: 'How quickly can we see results from digital marketing campaigns?',
+      a: 'Paid advertising campaigns on Meta and Google Search generate targeted lead inquiries within 24 to 48 hours of launch. Organic SEO and content strategies build sustainable search authority over 3 to 6 months.',
+    },
+    {
+      q: 'Do you manage ad campaigns directly inside client ad accounts?',
+      a: 'Yes. We maintain complete transparency by setting up and managing campaigns directly within your own Meta Business Manager and Google Ads accounts.',
     },
     {
       q: 'Does Sparrow serve businesses outside of Malegaon?',
-      a: 'Yes. While our engineering team is headquartered in Malegaon, we work with commercial enterprises, manufacturers, and startups in nearby cities such as Nashik, Dhule, Manmad, Nandgaon, Yeola, and across Maharashtra.',
+      a: 'Yes. Based in Malegaon, we regularly manage growth campaigns for commercial enterprises, retail brands, and service businesses in nearby cities such as Nashik, Dhule, Manmad, Nandgaon, Yeola, and across Maharashtra.',
     },
     {
-      q: 'Who owns the source code and software data?',
-      a: 'You own 100% of the custom software code, database schema, and intellectual property. We deploy your software directly to your dedicated cloud servers.',
-    },
-    {
-      q: 'How can I start a software project with Sparrow?',
-      a: 'You can contact our team directly via phone (+91 8421477238 / +91 8806413189), email sparrowdigisolution@gmail.com, or click "Start Your Software Project" to submit your requirements.',
+      q: 'How can I start a digital marketing project with Sparrow?',
+      a: 'You can call our growth team directly (+91 8421477238 / +91 8806413189), email sparrowdigisolution@gmail.com, or click "Discuss Growth Strategy" to request a campaign roadmap.',
     },
   ];
 
@@ -222,19 +219,19 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
       <section className="site-container text-center space-y-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900/60 border border-blue-400/30 text-sky-300 text-xs font-mono font-bold uppercase tracking-wider">
           <MapPin className="w-3.5 h-3.5 text-sky-400" />
-          <span>[ MALEGAON SOFTWARE ENGINEERING HUB ]</span>
+          <span>[ MALEGAON DIGITAL MARKETING HUB ]</span>
         </div>
 
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
-          Software Development Company in <span className="text-[#38BDF8]">Malegaon</span>
+          Digital Marketing Company in <span className="text-[#38BDF8]">Malegaon</span>
         </h1>
 
         <p className="text-base sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed font-normal">
-          Sparrow IT &amp; Digital Solutions engineers custom business software, internal tools, automated workflows, and enterprise dashboards tailored around your actual operational processes.
+          Sparrow IT &amp; Digital Solutions executes data-driven digital marketing campaigns—combining performance ad management, search engine optimization, content strategy, and lead generation to deliver measurable commercial growth.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <LetsTalkButton onClick={() => onOpenContact('Software Development in Malegaon')} label="Start Your Software Project" size="md" />
+          <LetsTalkButton onClick={() => onOpenContact('Digital Marketing in Malegaon')} label="Discuss Growth Strategy" size="md" />
           <button
             onClick={() => onNavigate('/web-development-company-in-malegaon/')}
             className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer"
@@ -249,15 +246,15 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
         <div className="p-8 sm:p-10 rounded-3xl bg-blue-950/70 border border-blue-400/30 text-left space-y-5">
           <div className="flex items-center gap-2 text-xs font-mono text-sky-300 font-bold uppercase tracking-widest">
             <Navigation className="w-4 h-4 text-sky-400" />
-            <span>REGIONAL SOFTWARE PARTNER</span>
+            <span>REGIONAL DIGITAL GROWTH PARTNER</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-            Custom Software Engineered for Malegaon &amp; Maharashtra Enterprises
+            Digital Growth Campaigns for Malegaon &amp; Surrounding Cities
           </h2>
 
           <p className="text-blue-100 text-sm sm:text-base leading-relaxed">
-            Headquartered in Malegaon, Sparrow combines technical software engineering expertise with a deep understanding of regional business needs. We partner with commercial enterprises, industrial manufacturers, textile units, and service businesses in Malegaon and nearby hubs including Nashik, Dhule, Manmad, Nandgaon, and Yeola to digitize operations and remove manual bottlenecks.
+            Headquartered in Malegaon, Sparrow designs and manages performance marketing campaigns for growing commercial brands, retail distributors, manufacturers, and professional services across Malegaon, Nashik, Dhule, Manmad, Nandgaon, and Yeola.
           </p>
 
           <div className="flex flex-wrap items-center gap-2 pt-2">
@@ -270,22 +267,22 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
         </div>
       </section>
 
-      {/* 3. Core Software Capabilities Grid */}
+      {/* 3. Core Marketing Services Grid */}
       <section className="mt-20 site-container space-y-12 text-left">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="text-xs font-mono font-bold text-sky-300 uppercase tracking-widest">
-            [ SOFTWARE ENGINEERING CAPABILITIES ]
+            [ DIGITAL MARKETING SERVICES ]
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Custom Software &amp; Internal Tools
+            Performance Marketing Capabilities
           </h2>
           <p className="text-blue-100 text-sm sm:text-base">
-            Bespoke systems built to automate operational friction, centralize data, and drive business scalability.
+            From technical SEO to server-side Meta &amp; Google ad campaigns designed for lead generation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {softwareCapabilities.map((item, i) => {
+          {marketingServices.map((item, i) => {
             const Icon = item.icon;
             return (
               <div key={i} className="p-8 rounded-3xl bg-blue-950/60 border border-blue-400/20 space-y-4 hover:border-sky-400/50 transition-all flex flex-col justify-between">
@@ -306,18 +303,18 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
       <section className="mt-20 site-container space-y-12 text-left">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="text-xs font-mono font-bold text-sky-300 uppercase tracking-widest">
-            [ ENGINEERING PIPELINE ]
+            [ PERFORMANCE METHODOLOGY ]
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            How We Build Custom Software
+            Our Growth Methodology
           </h2>
           <p className="text-blue-100 text-sm sm:text-base">
-            A disciplined, 5-stage software engineering process tailored around your operational requirements.
+            A 5-stage data-driven process engineered to maximize return on ad spend and lead conversion.
           </p>
         </div>
 
         <div className="space-y-4">
-          {workflowSteps.map((step, idx) => (
+          {growthSteps.map((step, idx) => (
             <div key={idx} className="p-6 sm:p-8 rounded-2xl bg-blue-950/60 border border-blue-400/20 flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <div className="text-2xl font-mono font-extrabold text-sky-400 shrink-0">
                 {step.num}
@@ -331,22 +328,22 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
         </div>
       </section>
 
-      {/* 5. Why Custom Software Over Off-The-Shelf */}
+      {/* 5. Why Choose Us */}
       <section className="mt-20 site-container space-y-12 text-left">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="text-xs font-mono font-bold text-sky-300 uppercase tracking-widest">
-            [ THE CUSTOM SOFTWARE ADVANTAGE ]
+            [ THE SPARROW MARKETING ADVANTAGE ]
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Why Custom Software Beats Generic Off-The-Shelf Tools
+            Why Businesses Partner With Sparrow
           </h2>
           <p className="text-blue-100 text-sm sm:text-base">
-            Eliminate generic SaaS limitations and build software tailored specifically to your company.
+            Transparent reporting, server-side tracking, and sub-second landing pages for maximum ROI.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {whyCustomSoftware.map((w, i) => (
+          {whyChooseUs.map((w, i) => (
             <div key={i} className="p-6 sm:p-8 rounded-3xl bg-blue-950/60 border border-blue-400/20 space-y-3">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
@@ -366,7 +363,7 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
             <span>[ FREQUENTLY ASKED QUESTIONS ]</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Software Engineering FAQs
+            Digital Marketing FAQs
           </h2>
         </div>
 
@@ -387,10 +384,10 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
       <section className="mt-20 site-container">
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#092B80] via-[#1866EC] to-[#0A2540] border border-blue-400/30 text-white text-center space-y-6 shadow-2xl">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Ready to Architect Your Custom Software System?
+            Ready to Drive Measurable Commercial Growth?
           </h2>
           <p className="text-sm sm:text-base text-blue-100 max-w-xl mx-auto font-normal leading-relaxed">
-            Contact Sparrow IT &amp; Digital Solutions today to schedule a technical roadmap and software architecture consultation.
+            Contact Sparrow IT &amp; Digital Solutions today to schedule a digital marketing strategy consultation.
           </p>
 
           <div className="p-4 rounded-2xl bg-blue-950/80 border border-blue-400/30 max-w-md mx-auto text-xs font-mono space-y-1">
@@ -399,7 +396,7 @@ export default function SoftwareCompanyMalegaon({ onOpenContact, onNavigate }) {
           </div>
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-            <LetsTalkButton onClick={() => onOpenContact('Software Development in Malegaon')} label="Initiate Software Project Brief" size="md" />
+            <LetsTalkButton onClick={() => onOpenContact('Digital Marketing in Malegaon')} label="Schedule Growth Strategy Brief" size="md" />
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ export default function OrbitalEcosystem({ onOpenContact }) {
 
   return (
     <section className="py-16 sm:py-24 bg-gradient-to-b from-[#0A2750] via-[#DCEBFF] to-[#E6F0FF] text-slate-900 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8 sm:space-y-12">
+      <div className="site-container relative z-10 text-center space-y-8 sm:space-y-12">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-blue-200 text-blue-700 text-xs font-mono font-bold uppercase tracking-wider shadow-sm">

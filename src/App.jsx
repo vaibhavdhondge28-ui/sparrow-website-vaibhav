@@ -20,6 +20,15 @@ import SoftwareCompanyNashik from './components/SoftwareCompanyNashik';
 import WebDevMalegaon from './components/WebDevMalegaon';
 import MobileAppMalegaon from './components/MobileAppMalegaon';
 import CustomSoftwareMalegaon from './components/CustomSoftwareMalegaon';
+import DigitalMarketingMalegaon from './components/DigitalMarketingMalegaon';
+import MalegaonLocationPage from './components/MalegaonLocationPage';
+import NashikLocationPage from './components/NashikLocationPage';
+import DhuleLocationPage from './components/DhuleLocationPage';
+import ManmadLocationPage from './components/ManmadLocationPage';
+import NandgaonLocationPage from './components/NandgaonLocationPage';
+import YeolaLocationPage from './components/YeolaLocationPage';
+
+import LocationSection from './components/LocationSection';
 
 export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -74,11 +83,34 @@ export default function App() {
         return <MobileAppMalegaon onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
       case '/custom-software-development-in-malegaon':
         return <CustomSoftwareMalegaon onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/digital-marketing-company-in-malegaon':
+        return <DigitalMarketingMalegaon onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/locations/malegaon':
+        return <MalegaonLocationPage onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/locations/nashik':
+        return <NashikLocationPage onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/locations/dhule':
+        return <DhuleLocationPage onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/locations/manmad':
+        return <ManmadLocationPage onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/locations/nandgaon':
+        return <NandgaonLocationPage onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/locations/yeola':
+        return <YeolaLocationPage onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/projects/skillverse':
+        return <ProductDetailPage product="skillverse" onClose={() => navigateTo('/')} onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/projects/ib':
+        return <ProductDetailPage product="ib" onClose={() => navigateTo('/')} onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
+      case '/projects/police-city-management':
+        return <ProductDetailPage product="police" onClose={() => navigateTo('/')} onOpenContact={handleOpenContact} onNavigate={navigateTo} />;
       default:
         return (
           <main>
             {/* Haptiq Blue Hero Section */}
             <Hero onOpenContact={() => handleOpenContact()} />
+
+            {/* Regional Footprint Location Section */}
+            <LocationSection />
 
             {/* Industry Capabilities Ticker */}
             <TrustSection />

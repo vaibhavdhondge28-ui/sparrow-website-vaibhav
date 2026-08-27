@@ -5,7 +5,12 @@ import LetsTalkButton from './LetsTalkButton';
 export default function CustomSoftwareMalegaon({ onOpenContact, onNavigate }) {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Custom Software Development in Malegaon | Sparrow IT & Digital Solutions";
+    document.title = "Custom Software Development in Malegaon | Sparrow";
+
+    let metaDesc = document.querySelector("meta[name='description']");
+    if (metaDesc) {
+      metaDesc.content = "Tailor-made software applications built around your actual business workflows in Malegaon. Eliminate manual spreadsheets with secure, scalable custom software.";
+    }
 
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {

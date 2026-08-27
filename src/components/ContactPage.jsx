@@ -83,7 +83,7 @@ export default function ContactPage({ isOpen, onClose, initialService = '' }) {
 
     setStatus('loading');
 
-    // Build Structured Email Body Format for sparrowitdigitalsolutions@gmail.com
+    // Build Structured Email Body Format for sparrowdigisolution@gmail.com
     const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
     const formattedMessage = `
@@ -121,7 +121,7 @@ export default function ContactPage({ isOpen, onClose, initialService = '' }) {
         },
         body: JSON.stringify({
           access_key: '5561a0f6-7b24-4f01-b5ed-59fa3b174b12',
-          to_email: 'sparrowitdigitalsolutions@gmail.com',
+          to_email: 'sparrowdigisolution@gmail.com',
           subject: `🚨 New Lead: ${formData.fullName} - ${formData.jobTitle}`,
           from_name: 'Sparrow IT & Digital Solutions Website',
           name: formData.fullName,
@@ -199,7 +199,7 @@ export default function ContactPage({ isOpen, onClose, initialService = '' }) {
               <div className="space-y-2">
                 <h4 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Thank You!</h4>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Your structured inquiry report has been dispatched automatically to <span className="font-bold text-slate-900">sparrowitdigitalsolutions@gmail.com</span>. Our team will contact you shortly, <span className="font-bold text-slate-900">{formData.fullName}</span>.
+                  Your structured inquiry report has been dispatched automatically to <span className="font-bold text-slate-900">sparrowdigisolution@gmail.com</span>. Our team will contact you shortly, <span className="font-bold text-slate-900">{formData.fullName}</span>.
                 </p>
               </div>
 

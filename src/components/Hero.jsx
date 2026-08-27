@@ -25,7 +25,7 @@ export default function Hero({ onOpenContact }) {
       {/* Background Subtle Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px] bg-blue-500/20 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-7">
+      <div className="site-container relative z-10 text-center space-y-7">
         {/* Haptiq Style Italic Quote */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -43,17 +43,17 @@ export default function Hero({ onOpenContact }) {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] max-w-4xl mx-auto text-white"
         >
-          Digital solutions that move your business <span className="text-[#38BDF8]">forward.</span>
+          Technology That Moves Your Business <span className="text-[#38BDF8]">Forward.</span>
         </motion.h1>
 
-        {/* Haptiq Style Supporting Copy */}
+        {/* Brand & Regional Supporting Copy */}
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-base sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed font-normal"
         >
-          Sparrow IT and digital solutions is a full-stack growth partner delivering high-ROAS <span className="font-bold text-white">Meta Ads</span>, <span className="font-bold text-white">Google Ads campaigns</span>, and <span className="font-bold text-white">custom web &amp; mobile app development</span> for ambitious companies.
+          Sparrow IT &amp; Digital Solutions is a software and digital solutions company based in Malegaon, Maharashtra. We engineer custom web applications, mobile platforms, enterprise software, and digital growth engines for ambitious businesses across Maharashtra and beyond.
         </motion.p>
 
         {/* Centered Haptiq Style Let's talk Button */}
@@ -75,7 +75,7 @@ export default function Hero({ onOpenContact }) {
           initial={{ opacity: 0, scale: 0.97, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="pt-8 max-w-4xl mx-auto"
+          className="pt-8 max-w-5xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden aspect-video bg-slate-900 shadow-2xl flex items-center justify-center group cursor-pointer" onClick={togglePlay}>
             <video

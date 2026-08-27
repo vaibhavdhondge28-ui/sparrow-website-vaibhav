@@ -5,7 +5,7 @@ import LetsTalkButton from './LetsTalkButton';
 export default function FinalCTA({ onOpenContact }) {
   return (
     <section className="py-24 bg-gradient-to-b from-[#0B3392] via-[#071C3A] to-[#051329] text-white relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+      <div className="site-container relative z-10 text-center space-y-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,12 +57,12 @@ export default function FinalCTA({ onOpenContact }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-3 rounded-xl bg-blue-950/70 border border-blue-800">
                 <div className="font-mono text-[10px] text-blue-300">PHONE CONTACT</div>
-                <div className="font-bold text-white mt-0.5">8421477238 / 9022454300</div>
+                <div className="font-bold text-white mt-0.5">8421477238 / 8806413189</div>
               </div>
 
               <div className="p-3 rounded-xl bg-blue-950/70 border border-blue-800">
                 <div className="font-mono text-[10px] text-blue-300">EMAIL CONTACT</div>
-                <div className="font-bold text-white mt-0.5 truncate">sparrowitdigitalsolutions@gmail.com</div>
+                <div className="font-bold text-white mt-0.5 truncate">sparrowdigisolution@gmail.com</div>
               </div>
             </div>
           </div>

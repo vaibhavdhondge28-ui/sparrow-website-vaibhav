@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 export default function FeaturedSolutions({ onOpenContact }) {
   return (
     <section id="solutions" className="py-24 bg-gradient-to-b from-[#0A2750] via-[#1E40AF] via-[#3B82F6] to-[#E6F0FF] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="site-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900/60 border border-blue-400/30 text-sky-200 text-xs font-mono font-bold uppercase tracking-wider">

@@ -22,7 +22,7 @@ export default function ImpactSection({ onOpenContact }) {
 
   return (
     <section className="py-20 bg-gradient-to-b from-[#0A2E80] via-[#1D4ED8] via-[#3B82F6] to-[#60A5FA] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="site-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {cards.map((card, i) => (
             <motion.div

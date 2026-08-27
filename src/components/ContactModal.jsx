@@ -207,7 +207,7 @@ export default function ContactModal({ isOpen, onClose, initialService = '' }) {
                         <div>
                           <div className="font-semibold text-slate-900">Phone / WhatsApp</div>
                           <div><a href="tel:8421477238" className="hover:underline text-blue-700 font-bold">8421477238</a></div>
-                          <div><a href="tel:9022454300" className="hover:underline text-blue-700 font-bold">9022454300</a></div>
+                          <div><a href="tel:8806413189" className="hover:underline text-blue-700 font-bold">8806413189</a></div>
                         </div>
                       </div>
 
@@ -215,8 +215,8 @@ export default function ContactModal({ isOpen, onClose, initialService = '' }) {
                         <Mail className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold text-slate-900">Direct Email</div>
-                          <a href="mailto:sparrowitdigitalsolutions@gmail.com" className="hover:underline text-blue-700 font-bold text-xs break-all">
-                            sparrowitdigitalsolutions@gmail.com
+                          <a href="mailto:sparrowdigisolution@gmail.com" className="hover:underline text-blue-700 font-bold text-xs break-all">
+                            sparrowdigisolution@gmail.com
                           </a>
                         </div>
                       </div>

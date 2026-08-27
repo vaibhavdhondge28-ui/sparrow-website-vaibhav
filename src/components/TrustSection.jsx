@@ -15,7 +15,7 @@ export default function TrustSection() {
 
   return (
     <section className="py-8 bg-gradient-to-b from-[#0A2E85] via-[#08236B] to-[#06183D] text-white overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-4 text-center mb-4">
+      <div className="site-container text-center mb-4">
         <p className="text-xs font-mono tracking-widest text-sky-300 uppercase font-semibold">
           CORE CAPABILITIES &amp; TECHNOLOGY SERVICES
         </p>

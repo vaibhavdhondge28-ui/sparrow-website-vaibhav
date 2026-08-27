@@ -108,7 +108,7 @@ graph TD
     I & J & K & L & D & E & F & G & H --> M[Click 'Let's Talk' / CTA]
     M --> N[ContactPage Modal Form]
     N --> O[Form Validation & Inquiry Payload]
-    O --> P[Dispatch Email Report to sparrowitdigitalsolutions@gmail.com]
+    O --> P[Dispatch Email Report to sparrowdigisolution@gmail.com]
     P --> Q[Confetti Celebration & Success Confirmation]
 ```
 
@@ -122,7 +122,7 @@ graph TD
 
 ### **C. Automated Contact Form Flow (`ContactPage.jsx`)**
 - Users fill out project details (Name, Email, Phone, Service Choice, Project Budget, Message).
-- Submits structured inquiry data to `sparrowitdigitalsolutions@gmail.com`.
+- Submits structured inquiry data to `sparrowdigisolution@gmail.com`.
 - Triggers confetti animation on success.
 
 ---
@@ -140,7 +140,7 @@ graph TD
 - **Name**: `Sparrow IT & Digital Solutions`
 - **Alternate Names**: `["Sparrow IT and Digital Solutions", "Sparrow IT", "Sparrow Digital"]`
 - **Area Served**: Malegaon, Nashik, Maharashtra, India
-- **Contact**: `+91-8421477238`, `+91-9022454300`
+- **Contact**: `+91-8421477238`, `+91-8806413189`
 - **Catalog**: Custom Web Apps, Mobile Apps, Enterprise ERPs, Meta Ads, Google Ads
 
 ---
